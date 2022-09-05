@@ -9,15 +9,28 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-/* header styles */
+.logo{
+    height: 80px;
+}
 
+/* barra de buscas */
+
+.bg-papel-bottom{
+    height: 154px;
+    background-image: url("../img/bg-rasgado-branco-base.png"); 
+    background-size: 100%; 
+    background-position: 0px 54px ;
+    background-repeat: no-repeat;
+}
+
+/* header styles */ 
 .searchbar{
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
     background-color:#c3bfbc;
     border-radius: 30px;
-    padding: 10px;
+    padding: 10px;    
     }
 
     .search_input{
