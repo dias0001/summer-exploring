@@ -1,7 +1,7 @@
 /* paleta de cores 
 orange : #e2a355
 orange clean : #deb37e
-aftergray : #7f7770  
+gray : #7f7770 
 dark gray #68635f 
 light gray #c3bfbc*/
 
@@ -15,11 +15,10 @@ body{
 
 /* barra de buscas */
 
-.bg-papel-bottom{
-    height: 154px;
-    background-image: url("../img/bg-rasgado-branco-base.png"); 
+.bg-papel-bottom{    
+    background-image: url("../img/bg-rasgado-branco-topo.png"); 
     background-size: 100%; 
-    background-position: 0px 54px ;
+    background-position: 0px -130px ;
     background-repeat: no-repeat;
 }
 
@@ -66,6 +65,28 @@ body{
     border-radius: 50%;
     color: #68635f;
     text-decoration:none;
+    }
+
+    .txt-laranja{
+        color: #e2a355;
+    }
+
+    .txt-cinza{
+        color: #7f7770;
+    }
+
+    .bg-laranja{
+        background-color:#e2a355;
+    }
+
+    .bg-cinza{
+        background-color: #7f7770;
+    }
+
+    .bg-folhas-left{
+        background-image: url('../img/bg-sombra-folhagem.png');
+        background-repeat: no-repeat;
+        background-position: 0 bottom;
     }
 
     /* celular e tablets */
