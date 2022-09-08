@@ -13,6 +13,13 @@ body{
     height: 80px;
 }
 
+.expand-4:hover{
+    width: 33%;
+    transition: width 1s ease-in-out;
+    
+
+}
+
 /* barra de buscas */
 
 .bg-papel-bottom{    
@@ -102,6 +109,11 @@ body{
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-size: 100%, auto, 100%;
         background-position: 0 -50px, 0 center, 0 302px;
+        
+    }
+
+    .flip-x{
+        transform: scaleX(-1);
         
     }
 
