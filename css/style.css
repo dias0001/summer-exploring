@@ -18,7 +18,7 @@ body{
 .bg-papel-bottom{    
     background-image: url("../img/bg-rasgado-branco-topo.png"); 
     background-size: 100%; 
-    background-position: 0px -130px ;
+    background-position: 0px -30px ;
     background-repeat: no-repeat;
 }
 
@@ -91,6 +91,18 @@ body{
         background-image: url('../img/bg-sombra-folhagem.png');
         background-repeat: no-repeat;
         background-position: 0 bottom;
+    }
+
+    .altura-400px{
+        height: 400px;
+    }
+
+    .bg-3{
+        background-image: url('../img/bg-rasgado-branco-topo.png'), url('../img/bg-sombra-folhagem.png'), url('../img/bg-rasgado-branco-base.png');
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 100%, auto, 100%;
+        background-position: 0 -50px, 0 center, 0 302px;
+        
     }
 
     /* celular e tablets */
