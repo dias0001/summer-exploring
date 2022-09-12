@@ -4,6 +4,12 @@ const aviso = (msg) => {
     alert(msg)
 }
 
+const mostraidade = () => {
+    let span = document.getElementById('txt-idade')
+    let campoidade = document.getElementById('idade')
+    span.innerText = campoidade.value    
+}
+
 
 
 
@@ -17,8 +23,13 @@ const aviso = (msg) => {
 
 /* //////////////////////// eventos e execuções automaticas /////  */
 
-//document.getElementById('nome').addEventListener('click', aviso)
+/*document.getElementById('nome').addEventListener('click', aviso)
 aviso('Tenha um bom dia Dave')
+document.getElementById('nome').addEventListener('click' , function(){
+    aviso('olá mundo !!! Este é o planeta terra')
+}) */ 
+
+mostraidade()
 
 
 
