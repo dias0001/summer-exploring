@@ -30,6 +30,8 @@ document.getElementById('nome').addEventListener('click' , function(){
 }) */ 
 
 mostraidade()
+document.getElementById('idade').addEventListener('change', mostraidade)
+
 
 
 
