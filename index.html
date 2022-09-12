@@ -237,7 +237,7 @@
       <p class="col-6 mx-auto mb-5 text-center">Preencha o formulário a baixo, queremos saber quem você é.
       </p>
 
-      <form action="" method="POST" enctype="multipart/form-data" style="min-height: 430px;">
+      <form action="" method="POST" enctype="multipart/form-data" class="pb-5 mb-5">
         <div class="mb-3">
           <input type="text" name="" id="nome" class="form-control" placeholder="Digite seu nome inteiro">
         </div>
@@ -257,19 +257,95 @@
             <input class="form-check-input" type="radio" name="sexo" id="sexo2" value="Masculino">
             <label class="form-check-label" for="">Masculino</label>
           </div>
-
         </fieldset>
 
-        
-               
+        <p class="m-0 mt-2">Sua Idade: <span id="txt-idade" class="fw-bold"></span></p>
+        <input type="range" class="form-range" name="idade" value="18" min="0" max="90">
+
+        <div class="mb-3">
+          <label for="" class="form-label">Seu telefone:</label>
+          <input type="tel" name="telefone" id="" class="form-control" placeholder=" ex: +55 + DDD + number">
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Digite uma senha</label>
+          <input type="password" name="senha" id="" class="form-control" placeholder="">
+        </div>
+
+        <div class="mb-3">
+          <label for="senha" class="form-label">Digite sua senha</label>
+          <input type="file" class="form-control" name="senha" id="" placeholder="" aria-describedby="fileHelpId">
+          <div id="fileHelpId" class="form-text">Somente JPG, PNG ou GIF</div>
+        </div>
+
+        <div class="mb-3" col-md-6>
+          <label for="" class="form-label">Selecione o seu Estado</label>
+          <select class="form-control" name="estado" id="estado">
+            <option value="são Paulo">São Paulo</option>
+            <option value="minas Gerais">Minas Gerais</option>
+            <option value="bahia">Bahia</option>
+            <option value="pernambuco">Pernambuco</option>
+          </select>
+        </div>
+
+        <div class="mb-3" col-md-6>
+          <label for="" class="form-label">Selecione o sua cidade</label>
+          <select class="form-control" name="cidade" id="cidade">
+            <option value="são Paulo">São Paulo</option>
+            <option value="São josé dos Campos">São José dos Campos</option>
+            <option value="Bonito">Bonito</option>
+            <option value="Arizona EUA">Arizona EUA</option>
+          </select>
         </div>
 
 
+        <p class="m-0 m-5">Selecione os destinos que gostaria de explorar:</p>
+        <div class="form-check">
+          <!--colocar o name="destinos[]""-->
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Brotas - SP" id="">
+          <label class="form-check-label" for="">
+            Brotas - SP
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Bonito - MS" id="">
+          <label class="form-check-label" for="">
+            Bonito - MS
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Jalapão TO" id="">
+          <label class="form-check-label" for="">
+            Jalapão TO
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="destinos[]" value="Grand Canyon - Arizona, USA" id="">
+          <label class="form-check-label" for="">
+            Grand Canyon - Arizona, USA
+          </label>
+        </div>
+
+        <p class="m-0 mt-5">Selecione o tipo de hospedagem</p>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" name="hospedagem[]" value="acampar"
+            id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Acampar (raiz)</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" name="hospedagem[]" value="Hotel/Pousada"
+            id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Hotel/pousada (nutela)</label>
+        </div>
+
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Envie sugestões / críticas</label>
+          <textarea class="form-control" name="" id="" rows="5"></textarea>
+        </div>
+
 
       </form>
-
     </section>
-
   </main>
 
 
