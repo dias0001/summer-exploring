@@ -21,7 +21,6 @@ const mostraData = () => {
 }
 
 //Preenche o select "estado" com os estados da API do IBGE
-//Preenche o select "estado" com os estados da API do IBGE
 const getEstados = () => {
     let api = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
     let select = document.getElementById('estado')
@@ -30,22 +29,45 @@ const getEstados = () => {
     fetch(api).then(resposta => resposta.json()).then(json => {
         let options = '<option>Selecione</option>'
 
+        /* console.log(json) */
+        for (const index in json) {
+            // console.log(json[index].nome)
+            options += `<option value="${json[index].sigla}">${json[index].nome}</option>`
+        }
         select.innerHTML = options
     })
-
-
 }
+
+// preencher o select de cidades de acordo com UF selecionado 
+// a função recebe um parâmetro (uf) com ID da UF 
+const getCidadesbyUF = (uf) => {
+    let api = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`
+    let select = document.getElementById('cidade')
+    
+    fetch(api).then(resposta => resposta.json()).then(json => {
+        let options = '<option>Selecione</option>'
+        
+        for (const index in json) {            
+            options += `<option value="${json[index].nome}">${json[index].nome}</option>`
+        }
+        select.innerHTML = options
+    })
+}     
+
+/*  EXEMPLO LAÇO FOR
 
 var semestre = ['jan', 'fev', 'Mar', 'Abr', 'Mai', 'Jun']
 var texto = ''
 for (let index = 0; index < semestre.length; index++) {
 const element = semestre[index];
-texto += element
-document.getElementById('explorar').innerHTML = texto + '<br>'
+texto += element + '<br>'
+document.getElementById('explorar').innerHTML = texto 
 
-}
+} */
+
 
 /* ---------------------------------------------------------------- */
+
 
 
 /* //////////////////////// eventos e execuções automaticas /////  */
@@ -64,14 +86,6 @@ mostraData()
 getEstados()
 
 
-
-
-
-
-
-
-
-
 //inicializada animações scrool do AOS
 AOS.init();
 
@@ -83,7 +97,6 @@ AOS.init();
 
     //váriavel captura as tags <form> que contém a classe "nedds-validation"    
     const forms = document.querySelectorAll('.needs-validation')
-
 
 
     // Executa para cada formulário da variável forms
@@ -99,3 +112,9 @@ AOS.init();
         }, false)
     })
 })()
+
+// this representa o objeto
+document.getElementById('estado').addEventListener('change', function () {
+    getCidadesbyUF(this.value)
+})
+
