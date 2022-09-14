@@ -22,19 +22,28 @@ const mostraData = () => {
 
 //Preenche o select "estado" com os estados da API do IBGE
 //Preenche o select "estado" com os estados da API do IBGE
-const getEstados = ()=>{
+const getEstados = () => {
     let api = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
     let select = document.getElementById('estado')
-  
+
     //Lê a API através do fetch(), 1o then captura os dados, 2o then trata os dados
     fetch(api).then(resposta => resposta.json()).then(json => {
-      let options = '<option>Selecione</option>'
-  
-      select.innerHTML = options
+        let options = '<option>Selecione</option>'
+
+        select.innerHTML = options
     })
-  
-  
-  }
+
+
+}
+
+var semestre = ['jan', 'fev', 'Mar', 'Abr', 'Mai', 'Jun']
+var texto = ''
+for (let index = 0; index < semestre.length; index++) {
+const element = semestre[index];
+texto += element
+document.getElementById('explorar').innerHTML = texto + '<br>'
+
+}
 
 /* ---------------------------------------------------------------- */
 
