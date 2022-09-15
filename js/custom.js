@@ -43,20 +43,29 @@ const getEstados = () => {
 const getCidadesbyUF = (uf) => {
     let api = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`
     let select = document.getElementById('cidade')
-    
+
     fetch(api).then(resposta => resposta.json()).then(json => {
         let options = '<option>Selecione</option>'
-        
-        for (const index in json) {            
+
+        for (const index in json) {
             options += `<option value="${json[index].nome}">${json[index].nome}</option>`
         }
         select.innerHTML = options
     })
-}  
+}
 
 const rolagem = ()=> {
-    console.log(window.scrolltop)
-}
+    const html = document.documentElement
+    const seta = document.getElementById('go-top')
+  
+    /* Se a rolagem for maior que 550, a seta aparece 
+    abaixo de 550 esconde */
+    if (html.scrollTop > 550 ) {
+      seta.style.display = 'block'
+    } else {
+      seta.style.display = 'none'
+    }
+  }
 
 /*  EXEMPLO LAÇO FOR
 
@@ -69,10 +78,7 @@ document.getElementById('explorar').innerHTML = texto
 
 } */
 
-
 /* ---------------------------------------------------------------- */
-
-
 
 /* //////////////////////// eventos e execuções automaticas /////  */
 
@@ -81,6 +87,8 @@ aviso('Tenha um bom dia Dave')
 document.getElementById('nome').addEventListener('click' , function(){
     aviso('olá mundo !!! Este é o planeta terra')
 }) */
+
+
 
 mostraidade()
 document.getElementById('idade').addEventListener('change', mostraidade)
@@ -121,4 +129,8 @@ AOS.init();
 document.getElementById('estado').addEventListener('change', function () {
     getCidadesbyUF(this.value)
 })
+
+//window.addEventListener('scroll , rolagem')
+
+window.onscroll = () => rolagem()
 

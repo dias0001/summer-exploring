@@ -137,7 +137,7 @@ body{
     }
 
     .braboicone{
-        display: block;
+        display: none;
         position: fixed;
         right: 20px;
         bottom: 20px; 
@@ -149,7 +149,7 @@ body{
         line-height: 40px;
         font-size: 20px;
         color: #fff;
-        background-color: #68635f ;
+        background-color: #68635f;       
         transition: background-color 1s;
     } 
 
