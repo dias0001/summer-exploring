@@ -52,7 +52,11 @@ const getCidadesbyUF = (uf) => {
         }
         select.innerHTML = options
     })
-}     
+}  
+
+const rolagem = ()=> {
+    console.log(window.scrolltop)
+}
 
 /*  EXEMPLO LAÇO FOR
 

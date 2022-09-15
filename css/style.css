@@ -16,9 +16,8 @@ body{
 .expand-4:hover{
     width: 33%;
     transition: width 1s ease-in-out;
-    
-
 }
+
 
 /* barra de buscas */
 
@@ -110,9 +109,15 @@ body{
         background-image: url('../img/bg-rasgado-branco-topo.png'), url('../img/bg-sombra-folhagem.png'), url('../img/bg-rasgado-branco-base.png');
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-size: 100%, auto, 100%;
-        background-position: 0 -50px, 0 center, 0 302px;
-        
+        background-position: 0 -50px, 0 center, 0 302px;        
     }
+
+    .bg-4{
+        background-image: url('../img/bg-rasgado-branco-topo.png');
+        background-repeat: no-repeat;
+        background-size: 100%, auto;
+    }
+
 
     .bg-topo-base-rasgado{
         background-image: url('../img/bg-rasgado-branco-topo.png'), url('../img/bg-rasgado-branco-base.png');
@@ -130,7 +135,29 @@ body{
         -webkit-animation: kenburns-bottom-right 5s ease-out infinite alternate-reverse both;
                 animation: kenburns-bottom-right 5s ease-out infinite alternate-reverse both;
     }
- 
+
+    .braboicone{
+        display: block;
+        position: fixed;
+        right: 20px;
+        bottom: 20px; 
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #68635f ;
+        transition: background-color 1s;
+    } 
+
+    .braboicone:hover{
+        color: #fff;  
+        background-color: #e2a355;
+      }
+      
 
 /**
  * ----------------------------------------
